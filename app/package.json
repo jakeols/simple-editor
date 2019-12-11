@@ -14,5 +14,7 @@
     "postinstall": "yarn electron-rebuild"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "electron-reload": "^1.5.0"
+  }
 }

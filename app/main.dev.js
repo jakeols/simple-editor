@@ -14,6 +14,8 @@ import { app, BrowserWindow } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
+// Enable live reload for all the files inside your project directory
+require('electron-reload')(__dirname);
 
 export default class AppUpdater {
   constructor() {

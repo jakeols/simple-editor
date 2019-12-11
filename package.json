@@ -1,6 +1,6 @@
 {
   "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
+  "productName": "SimpleEditor",
   "version": "0.18.0",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "scripts": {
@@ -28,7 +28,7 @@
     "preinstall": "node ./internals/scripts/CheckYarn.js",
     "prestart": "yarn build",
     "start": "cross-env NODE_ENV=production electron ./app/main.prod.js",
-    "start-main-dev": "cross-env START_HOT=1 NODE_ENV=development electron -r @babel/register ./app/main.dev.js",
+    "start-main-dev": "cross-env HOT=1 NODE_ENV=development electron -r @babel/register ./app/main.dev.js",
     "start-renderer-dev": "cross-env NODE_ENV=development webpack-dev-server --config configs/webpack.config.renderer.dev.babel.js",
     "test": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 jest",
     "test-all": "yarn lint && yarn flow && yarn build && yarn test && yarn build-e2e && yarn test-e2e",
@@ -56,8 +56,8 @@
     ]
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.develar.ElectronReact",
+    "productName": "Simple Editor",
+    "appId": "org.develar.SimpleEditor",
     "files": [
       "dist/",
       "node_modules/",
@@ -266,6 +266,7 @@
     "devtron": "^1.4.0",
     "electron-debug": "^3.0.1",
     "electron-log": "^3.0.9",
+    "electron-reload": "^1.5.0",
     "electron-updater": "^4.2.0",
     "history": "^4.10.1",
     "react": "^16.12.0",
