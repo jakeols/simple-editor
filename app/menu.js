@@ -142,6 +142,18 @@ export default class MenuBuilder {
         { label: 'Bring All to Front', selector: 'arrangeInFront:' }
       ]
     };
+    const subMenuFile = {
+      label: 'File',
+      submenu: [
+        {
+          label: 'Save',
+          accelerator: 'Command+S',
+          click() {
+            console.log('should save file?');
+          }
+        }
+      ]
+    };
     const subMenuHelp = {
       label: 'Help',
       submenu: [
@@ -177,7 +189,14 @@ export default class MenuBuilder {
     const subMenuView =
       process.env.NODE_ENV === 'development' ? subMenuViewDev : subMenuViewProd;
 
-    return [subMenuAbout, subMenuEdit, subMenuView, subMenuWindow, subMenuHelp];
+    return [
+      subMenuAbout,
+      subMenuEdit,
+      subMenuFile,
+      subMenuView,
+      subMenuWindow,
+      subMenuHelp
+    ];
   }
 
   buildDefaultTemplate() {
